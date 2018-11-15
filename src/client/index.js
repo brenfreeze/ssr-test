@@ -1,8 +1,8 @@
 import React from 'react'
-import { hydrate, render } from 'react-dom'
+import { hydrate } from 'react-dom'
 import App from '../shared/App'
 
-render(
+hydrate(
   <App/>,
   document.getElementById('root')
 );
