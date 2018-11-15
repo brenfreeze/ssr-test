@@ -1,0 +1,57 @@
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+
+@import 'bootstrap/scss/utilities';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/images';
+@import 'bootstrap/scss/tooltip';
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
+* {
+  font-family: 'Roboto Slab', serif;
+}
+
+.layout {
+  min-height: 100vh;
+}
+
+.brand {
+  color: white;
+}
+
+.content {
+  padding: 0 3.125em;
+}
+
+.post-card {
+  cursor: pointer;
+}
+
+@include media-breakpoint-up(lg) {
+  .post-card {
+    height: 250px;
+  }
+}
+
+.ant-input {
+  font-family: 'Roboto Slab', serif;
+}
+
+.post-modal {
+
+  textarea {
+    resize: none;
+    border: none;
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  &-title {
+    color: black;
+    font-size: 2em;
+  }
+}

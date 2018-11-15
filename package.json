@@ -1,0 +1,60 @@
+{
+  "name": "ssr-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run watch & npm run serve & npm run styles",
+    "styles": "less-watch-compiler --enable-js ./src/shared/Styles ./public & node-sass-chokidar --include-path ./node_modules/ ./src/shared/Styles -o ./public --watch",
+    "watch": "webpack -w",
+    "serve": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "transform-object-rest-spread",
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "antd": "^3.10.7",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "less-watch-compiler": "^1.13.0",
+    "mini-css-extract-plugin": "^0.4.4",
+    "nodemon": "^1.18.6",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "@babel/core": "^7.1.6",
+    "bootstrap": "^4.1.3",
+    "cors": "^2.8.5",
+    "css-loader": "^1.0.1",
+    "express": "^4.16.4",
+    "isomorphic-fetch": "^2.2.1",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "node-sass-chokidar": "^1.3.4",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-redux": "^5.1.1",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "sass-loader": "^7.1.0",
+    "serialize-javascript": "^1.5.0",
+    "style-loader": "^0.23.1"
+  }
+}
